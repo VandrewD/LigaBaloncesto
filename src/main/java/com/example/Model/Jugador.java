@@ -33,6 +33,9 @@ public class Jugador {
     @Column
     protected String posicion;
 
+    @ManyToOne
+    private Equipo equipo;
+
     public Jugador() {
     }
 
@@ -61,44 +64,52 @@ public class Jugador {
         this.name = name;
     }
 
-    public Date getFecha_nacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFecha_nacimiento(Date fecha_nacimiento) {
-        this.fechaNacimiento = fecha_nacimiento;
-    }
-
-    public Integer getCanastas_totales() {
-        return canastasTotales;
-    }
-
-    public void setCanastas_totales(Integer canastas_totales) {
-        this.canastasTotales = canastas_totales;
-    }
-
-    public Integer getAsistencias_totales() {
-        return asistenciasTotales;
-    }
-
-    public void setAsistencias_totales(Integer asistencias_totales) {
-        this.asistenciasTotales = asistencias_totales;
-    }
-
-    public Integer getRebotes_totales() {
-        return rebotesTotales;
-    }
-
-    public void setRebotes_totales(Integer rebotes_totales) {
-        this.rebotesTotales = rebotes_totales;
-    }
-
     public String getPosicion() {
         return posicion;
     }
 
     public void setPosicion(String posicion) {
         this.posicion = posicion;
+    }
+
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
+
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Integer getCanastasTotales() {
+        return canastasTotales;
+    }
+
+    public void setCanastasTotales(Integer canastasTotales) {
+        this.canastasTotales = canastasTotales;
+    }
+
+    public Integer getAsistenciasTotales() {
+        return asistenciasTotales;
+    }
+
+    public void setAsistenciasTotales(Integer asistenciasTotales) {
+        this.asistenciasTotales = asistenciasTotales;
+    }
+
+    public Integer getRebotesTotales() {
+        return rebotesTotales;
+    }
+
+    public void setRebotesTotales(Integer rebotesTotales) {
+        this.rebotesTotales = rebotesTotales;
     }
 
     @Override
