@@ -209,7 +209,7 @@ public class JugadorService {
         System.out.println(jugadorRepository.findByCanastasTotalesGreaterThanEqualAndFechaNacimientoBefore(5, calendar.getTime()));
 
 
-
+//2
 
         //2.a
         System.out.println("Devuelve todos los equipos indicando localidad");
